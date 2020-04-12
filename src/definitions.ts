@@ -6,4 +6,7 @@ declare module "@capacitor/core" {
 
 export interface IonAndroidWebSocketServerPlugin {
   echo(options: { value: string }): Promise<{value: string}>;
+  stopServer(): Promise<any>;
+  serverStatus(): Promise<{status: boolean}>;
+  startServer(): Promise<any>;
 }
