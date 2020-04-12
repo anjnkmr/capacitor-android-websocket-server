@@ -8,6 +8,18 @@ export class IonAndroidWebSocketServerWeb extends WebPlugin implements IonAndroi
       platforms: ['web']
     });
   }
+  
+  stopServer(): Promise<any> {
+    throw new Error("Method not implemented.");
+  }
+
+  serverStatus(): Promise<{ status: boolean; }> {
+    throw new Error("Method not implemented.");
+  }
+  
+  startServer(): Promise<any> {
+    throw new Error("Method not implemented.");
+  }
 
   async echo(options: { value: string }): Promise<{value: string}> {
     console.log('ECHO', options);
